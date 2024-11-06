@@ -2,12 +2,12 @@ import React from "react";
 import Button from "./Button";
 import '../styles/App.css'
 
-export default function BottomBox({handleClickEnter, handleClickNumber, handleClickOperation, handleClickAC, handleClickDel}){
+export default function BottomBox({handleClickEnter, handleClickNumber, handleClickOperation, handleClickAC, handleClickDel, handleClickPorcentage}){
     return(
         <div className="card">
             <Button valor="AC" className="but-2" onClick={handleClickAC} />
             <Button valor={"DEL"} className="but-2" onClick={handleClickDel}/>
-            <Button valor={"%"} className="but-3"/>
+            <Button valor={"%"} className="but-3" onClick={handleClickPorcentage}/>
             <Button valor="/" onClick={handleClickOperation} className="but-3"/>
             
             <Button valor={"7"} onClick={handleClickNumber}/>

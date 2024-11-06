@@ -52,6 +52,14 @@ export default function App() {
     setScreen("")
   };
 
+  const handleClickPorcentage=()=>{
+    setOperand((prev)=>{
+      const decimal=Number(prev)/100
+      setScreen(decimal.toString())
+      return decimal.toString();
+    })
+  }
+
   const handleClickEnter=()=>{
     calculate()
   }
@@ -79,6 +87,7 @@ export default function App() {
         handleClickOperation={handleClickOperation}
         handleClickAC={handleClickAC}
         handleClickDel={handleClickDel}
+        handleClickPorcentage={handleClickPorcentage}
         />
     </div>
   )
